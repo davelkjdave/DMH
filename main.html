@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div id="main_screen" class="screen">
+        <div id="clock" class="app">
+            <img src="" alt="" id="clock_img">
+            <div id="clock_name" class="name">시계</div>
+        </div>
+        <div id="math" class="app">
+            <img src="" alt="" id="math_img">
+            <div id="math_name" class="name">수학</div>
+        </div>    
+        <div id="bg_change" class="app">
+            <div id="bg_change_name" class="name">설정</div>
+        </div>
+    </div>
+    <div id="clock_screen"class="screen">
+        <div class="clock_exit_button" id="clock_exit_button_one">X</div>
+        <div id="clock_side_menu">
+            <ul id="clock_side_menu_ul">
+                <li class="clock_side_menu_li first">세계시각</li>
+                <li class="clock_side_menu_li second">타이머</li>
+                <li class="clock_side_menu_li third">스탑워치</li>
+                <li class="clock_side_menu_li fourth">알람시계</li>
+            </ul>
+        </div>
+        <div id="world_map" class="clock_right">
+            <div id="clock_world"></div>
+            <div id="korea" class="country_dot"></div>
+            <div id="korea_name" class="country_name">한국</div>
+            <div id="newyork" class="country_dot"></div>
+            <div id="newyork_name" class="country_name">뉴욕</div>
+            <div id="paris" class="country_dot"></div>
+            <div id="paris_name" class="country_name">파리</div>
+            <div id="china" class="country_dot"></div>
+            <div id="china_name" class="country_name">중국</div>
+            <select name="" id="change_country">
+                <option value="korea">한국</option>
+                <option value="newyork">뉴욕</option>
+                <option value="paris">파리</option>
+                <option value="china">중국</option>
+            </select>
+        </div>
+        <div id="timer" class="clock_right">
+        <div class="clock_exit_button" id="clock_exit_button_two">X</div>
+            <div id="timer_circle">
+                <span id="clock_hour">00</span>
+                <span>:</span>
+                <span id="clock_min">00</span>
+                <span>:</span>
+                <span id="clock_sec">00</span>
+            </div>
+            <div id="timer_button">
+                <div id="timer_thirty_sec" class="timer_buttons">+30sec</div>
+                <div id="timer_one_min" class="timer_buttons">+1min</div>
+                <div id="timer_ten_min" class="timer_buttons">+10min</div>
+            </div>
+            <div id="timer_start">
+                <div id="timer_reset_button" class="timer_buttons">초기화</div>
+                <div id="timer_start_button" class="timer_buttons">시작</div>
+            </div>
+        </div>
+        <div id="stopwatch" class="clock_right">
+            <div class="clock_exit_button" id="clock_exit_button_three">X</div>
+            <div id="stopwatch_circle">
+                <span id="stopwatch_hour">00</span>
+                <span>:</span>
+                <span id="stopwatch_min">00</span>
+                <span>:</span>
+                <span id="stopwatch_sec">00</span>
+            </div>
+            <div id="stopwatch_button">
+                <div id="stopwatch_record" class="stopwatch_buttons">기록</div>
+                <div id="stopwatch_start" class="stopwatch_buttons">시작</div>
+            </div>
+            <div id="stopwatch_reset">초기화</div>
+            <table id="stopwatch_record_table">
+                <tr id="stopwatch_record_tr">
+                    
+                </tr>
+            </table>
+        </div>
+        <div id="alram" class="clock_right">
+            <button id="alram_add">알람 추가하기</button>
+            <div id="alram_list">
+                <table id="alram_table">
+                    <td id="alram_td">
+
+                    </td>
+                </table>
+            </div>
+            <div id="alram_custom">
+                <select id="alram_AMPM">
+                    <option value="am">AM</option>
+                    <option value="pm">PM</option>
+                </select>
+                <div id="alram_hour">00</div>
+                <div id="alram_slash">:</div>
+                <div id="alram_min">00</div>
+                <div id="alram_exit">X</div>
+                <div id="alram_finish">완료</div>
+            </div>
+            <div class="clock_exit_button" id="clock_exit_button_five">X</div>
+        </div>
+    </div>
+    <div id="math_screen">
+        <div id="math_side_menu">
+            <ul id="math_side_menu_ul">
+                <li class="math_side_menu_li first">계산기</li>
+                <li class="math_side_menu_li second">함수 생성기</li>
+                <li class="math_side_menu_li third">계산기 기록</li>
+            </ul>
+        </div>
+        <div class="math_right">
+            <div id="calculator">
+                <table border="1" id="cla_table">
+                    <tr>
+                        <td colspan="4">
+                            <input type="text" id="display" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <input type="text" id="result" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" onclick="reset()">AC</td>
+                        <td onclick="add('/')">/</td>
+                    </tr>
+                    <tr>
+                        <td onclick="add(7)">7</td>
+                        <td onclick="add(8)">8</td>
+                        <td onclick="add(9)">9</td>
+                        <td onclick="add('*')">*</td>
+                    </tr>
+                    <tr>
+                        <td onclick="add(4)">4</td>
+                        <td onclick="add(5)">5</td>
+                        <td onclick="add(6)">6</td>
+                        <td onclick="add('-')">-</td>
+                    </tr>
+                    <tr>
+                        <td onclick="add(1)">1</td>
+                        <td onclick="add(2)">2</td>
+                        <td onclick="add(3)">3</td>
+                        <td onclick="add('+')">+</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" onclick="add(0)">0</td>
+                        <td onclick="add('.')">.</td>
+                        <td onclick="calculate()">=</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="calculator_record">
+                <table id="calculator_record_table">
+                    <td id="calculator_record_td">
+
+                    </td>
+                </table>
+            </div>
+        </div>
+        <div id="clock_exit_button_four" class="clock_exit_button">X</div>
+    </div>
+    <div id="setting_screen" class="screen">
+        <div id="setting_side_menu">
+            <ul id="setting_side_menu_ul">
+                <li class="setting_side_menu_li first">배경화면</li>
+            </ul>
+        </div>
+        <div id="setting_right">
+            <div id="setting_bg_change">
+                <table id="setting_bg_change_table">
+                    <tr class="setting_bg_change_tr">
+                        <td class="setting_bg_change_td">
+                            <img src="/img/bg0.png" alt="" class="setting_bg_change_img">
+                            <div class="setting_bg_change_name">기본</div>
+                        </td>
+                        <td class="setting_bg_change_td">
+                            <img src="/img/bg1.png" alt="" class="setting_bg_change_img">
+                            <div class="setting_bg_change_name">풍경1</div>
+                        </td>
+                        <td class="setting_bg_change_td">
+                            <img src="/img/bg2.png" alt="" class="setting_bg_change_img">
+                            <div class="setting_bg_change_name">풍경2</div>
+                        </td>
+                    </tr>
+                    <tr class="setting_bg_change_tr">
+                        <td class="setting_bg_change_td">
+                            <img src="/img/bg3.png" alt="" class="setting_bg_change_img">
+                            <div class="setting_bg_change_name">풍경3</div>
+                        </td>
+                        <td class="setting_bg_change_td">
+                            <img src="/img/bg4.png" alt="" class="setting_bg_change_img">
+                            <div class="setting_bg_change_name">에펠탑</div>
+                        </td>
+                        <td class="setting_bg_change_td">
+                            <img src="/img/bg5.png" alt="" class="setting_bg_change_img">
+                            <div class="setting_bg_change_name">피사의 사탑</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="setting_exit" class="clock_exit_button">X</div>
+        </div>
+    </div>
+    <script src="/main.js"></script>
+</body>
+</html>
